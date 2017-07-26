@@ -1,0 +1,26 @@
+{
+  "name": "weapp-font-icons",
+  "description": "A premium icon font for weapp.",
+  "main": "dist/weapp-font-icons.js",
+  "authors": [
+    "afei"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "next"
+  ],
+  "homepage": "https://github.com/afeiship/weapp-font-icons",
+  "moduleType": [
+    "amd"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "src",
+    "gulp",
+    "gulpfile.js"
+  ]
+}
