@@ -1,4 +1,5 @@
 import ReactFontIcon from '@jswork/react-font-icon/src/main';
+import './setup.ts';
 import '@jswork/react-font-icon/src/style.scss';
 
 function App() {
@@ -8,10 +9,10 @@ function App() {
         Build Time: {BUILD_TIME}
       </div>
       <div className="text-center space-x-2">
-        <ReactFontIcon prefix="ai7icon-" name="a-custompersonbubble" size={20} />
-        <ReactFontIcon prefix="ai7icon-" name="a-custompersonbubble" size={24} />
-        <ReactFontIcon prefix="ai7icon-" name="a-custompersonbubble" size={28} />
-        <ReactFontIcon prefix="ai7icon-" name="a-custompersonbubble" size={50} />
+        <ReactFontIcon name="a-custompersonbubble" size={20} />
+        <ReactFontIcon name="a-custompersonbubble" size={24} />
+        <ReactFontIcon name="a-custompersonbubble" size={28} />
+        <ReactFontIcon name="a-custompersonbubble" size={50} />
       </div>
     </div>
   );

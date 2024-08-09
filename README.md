@@ -19,9 +19,19 @@ npm install -S @jswork/react-font-icon
   // or use sass
   @import "~@jswork/react-font-icon/dist/style.scss";
   ```
-2. import js
+2. setup / set defaults
+```js
+import ReactFontIcon from '@jswork/react-font-icon/main';
+
+ReactFontIcon.defaultProps = {
+  ...ReactFontIcon.defaultProps,
+  prefix: 'ai7icon-',
+};
+```
+3. import js
   ```js
-  import ReactFontIcon from '@jswork/react-font-icon/main';
+  import ReactFontIcon from '@jswork/react-font-icon/src/main';
+  import './setup.ts';
   import '@jswork/react-font-icon/dist/style.scss';
 
   function App() {
@@ -31,10 +41,10 @@ npm install -S @jswork/react-font-icon
           Build Time: {BUILD_TIME}
         </div>
         <div className="text-center space-x-2">
-          <ReactFontIcon prefix="ai7icon-" name="a-custompersonbubble" size={20} />
-          <ReactFontIcon prefix="ai7icon-" name="a-custompersonbubble" size={24} />
-          <ReactFontIcon prefix="ai7icon-" name="a-custompersonbubble" size={28} />
-          <ReactFontIcon prefix="ai7icon-" name="a-custompersonbubble" size={50} />
+          <ReactFontIcon name="a-custompersonbubble" size={20} />
+          <ReactFontIcon name="a-custompersonbubble" size={24} />
+          <ReactFontIcon name="a-custompersonbubble" size={28} />
+          <ReactFontIcon name="a-custompersonbubble" size={50} />
         </div>
       </div>
     );
