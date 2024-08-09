@@ -1,8 +1,2 @@
-# weapp-font-icons
-> A premium icon font for weapp.
-
-
-## resources:
-
-## todos:
-- [ ] todo list..
+# react-font-icon
+> Ali font icon for react.
