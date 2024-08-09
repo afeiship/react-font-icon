@@ -1,0 +1,48 @@
+/* 在线链接服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+@font-face {
+  font-family: 'iconfont';  /* Project id 4644398 */
+  src: url('//at.alicdn.com/t/c/font_4644398_4x3rqz4a838.woff2?t=1723190553298') format('woff2'),
+  url('//at.alicdn.com/t/c/font_4644398_4x3rqz4a838.woff?t=1723190553298') format('woff'),
+  url('//at.alicdn.com/t/c/font_4644398_4x3rqz4a838.ttf?t=1723190553298') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ai7icon-message:before {
+  content: "\e608";
+}
+
+.ai7icon-a-messagefill:before {
+  content: "\e609";
+}
+
+.ai7icon-a-custompersonbubblefill:before {
+  content: "\e607";
+}
+
+.ai7icon-a-custompersonbubble:before {
+  content: "\e606";
+}
+
+.ai7icon-a-customgraduationcap:before {
+  content: "\e602";
+}
+
+.ai7icon-a-customgraduationcapfill:before {
+  content: "\e603";
+}
+
+.ai7icon-a-custompersonfill:before {
+  content: "\e604";
+}
+
+.ai7icon-a-customperson:before {
+  content: "\e605";
+}
+

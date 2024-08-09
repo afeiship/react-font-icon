@@ -1,8 +1,7 @@
-// import noop from '@jswork/noop';
 import cx from 'classnames';
-import React, { ReactNode, Component, HTMLAttributes } from "react";
+import React, { Component, HTMLAttributes } from 'react';
 
-const CLASS_NAME = "react-font-icon";
+const CLASS_NAME = 'react-font-icon';
 // const uuid = () => Math.random().toString(36).substring(2, 9);
 export type ReactFontIconProps = {
   /**
@@ -11,22 +10,39 @@ export type ReactFontIconProps = {
    */
   className?: string;
   /**
-   * The children element.
+   * Main icon className, default is `iconfont`.
    */
-  children?: ReactNode;
+  iconClassName?: string;
+  /**
+   * The prefix of icon name, default is `icon-`.
+   */
+  prefix?: string;
+  /**
+   * The icon name.
+   */
+  name: string;
 } & HTMLAttributes<HTMLDivElement>;
 
 export default class ReactFontIcon extends Component<ReactFontIconProps> {
   static displayName = CLASS_NAME;
-  static version = "__VERSION__";
-  static defaultProps = {};
+  static version = '__VERSION__';
+  static defaultProps = {
+    iconClassName: 'iconfont',
+    prefix: 'icon-',
+  };
+
+  get namedClass() {
+    const { prefix, name } = this.props;
+    return `${prefix}${name}`;
+  }
 
   render() {
-    const { className, children,...rest } = this.props;
+    const { iconClassName, className, children, prefix, name, ...rest } = this.props;
     return (
-      <div data-component={CLASS_NAME} className={cx(CLASS_NAME, className)} {...rest}>
-        {children}
-      </div>
+      <i data-component={CLASS_NAME}
+         className={cx(iconClassName, this.namedClass, CLASS_NAME, className)}
+         {...rest}
+      />
     );
   }
 }
