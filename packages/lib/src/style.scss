@@ -1,3 +1,4 @@
-//.react-font-icon {
-//  color: red;
-//}
+.react-font-icon {
+  --react-font-icon-font-size: 16px;
+  font-size: var(--react-font-icon-font-size);
+}

@@ -21,6 +21,10 @@ export type ReactFontIconProps = {
    * The icon name.
    */
   name: string;
+  /**
+   * The size of icon, default is `16`.
+   */
+  size?: number | string;
 } & HTMLAttributes<HTMLDivElement>;
 
 export default class ReactFontIcon extends Component<ReactFontIconProps> {
@@ -29,6 +33,7 @@ export default class ReactFontIcon extends Component<ReactFontIconProps> {
   static defaultProps = {
     iconClassName: 'iconfont',
     prefix: 'icon-',
+    size: 16,
   };
 
   get namedClass() {
@@ -36,11 +41,18 @@ export default class ReactFontIcon extends Component<ReactFontIconProps> {
     return `${prefix}${name}`;
   }
 
+  get calcStyle() {
+    const { style, size } = this.props;
+    const fontSize = typeof size === 'number' ? `${size}px` : size;
+    return { ...style, '--react-font-icon-font-size': fontSize };
+  }
+
   render() {
-    const { iconClassName, className, children, prefix, name, ...rest } = this.props;
+    const { iconClassName, className, children, prefix, name, size, style, ...rest } = this.props;
     return (
       <i data-component={CLASS_NAME}
          className={cx(iconClassName, this.namedClass, CLASS_NAME, className)}
+         style={this.calcStyle}
          {...rest}
       />
     );
