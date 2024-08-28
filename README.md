@@ -21,7 +21,7 @@ npm install -S @jswork/react-font-icon
   ```
 2. setup / set defaults
 ```js
-import ReactFontIcon from '@jswork/react-font-icon/main';
+import ReactFontIcon from '@jswork/react-font-icon';
 
 ReactFontIcon.defaultProps = {
   ...ReactFontIcon.defaultProps,
@@ -30,7 +30,7 @@ ReactFontIcon.defaultProps = {
 ```
 3. import js
   ```js
-  import ReactFontIcon from '@jswork/react-font-icon/src/main';
+  import ReactFontIcon from '@jswork/react-font-icon';
   import './setup.ts';
   import '@jswork/react-font-icon/dist/style.scss';
 

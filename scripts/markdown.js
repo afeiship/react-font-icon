@@ -19,7 +19,7 @@ nx.declare({
 
       nx.replaceInFile('README.md', [
         ['__GENERATE_DAPP__', indentString(docApp, 2).trimEnd()],
-        ['@jswork/react-font-icon/src', '@jswork/react-font-icon'],
+        ['@jswork/react-font-icon/src/main', '@jswork/react-font-icon'],
         ['src/style.scss', 'dist/style.scss'],
       ]);
     },
